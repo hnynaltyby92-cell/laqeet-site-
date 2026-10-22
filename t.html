@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لقيته | المفقودات والمعثورات</title>
+  <link rel="stylesheet" href="c.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#home">لقيته<span>.</span></a>
+
+    <nav class="navigation">
+      <a href="#home">الرئيسية</a>
+      <a href="#items">المفقودات والمعثورات</a>
+      <a href="#report">إضافة بلاغ</a>
+    </nav>
+
+    <a class="header-button" href="#report">أضف بلاغك +</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">منصة المفقودات والمعثورات</span>
+        <h1>ضاع منك شيء؟<br><span>خلّنا نلقاه معك.</span></h1>
+        <p>
+          منصة تجمع المفقودات والمعثورات في مكان واحد،
+          لتسهيل العثور على أغراضك داخل الكلية.
+        </p>
+        <a class="primary-button" href="#items">استكشف الأغراض</a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-circle">
+          <div class="search-symbol">⌕</div>
+          <span class="floating-item item-one">🔑</span>
+          <span class="floating-item item-two">🎒</span>
+          <span class="floating-item item-three">📱</span>
+          <span class="floating-item item-four">🎧</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="items-section" id="items">
+      <div class="section-heading">
+        <span class="eyebrow">خلّنا نساعدك</span>
+        <h2>المفقودات والمعثورات</h2>
+        <p>ابحث عن غرضك أو تصفح البلاغات المنشورة.</p>
+      </div>
+
+      <div class="search-box">
+        <label for="searchInput">ابحث عن غرض</label>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="مثال: مفاتيح، محفظة، سماعة..."
+        >
+        <button type="button" id="searchButton">بحث</button>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-button active" data-filter="الكل" type="button">
+          جميع الأغراض
+        </button>
+        <button class="filter-button" data-filter="مفقود" type="button">
+          أغراض مفقودة
+        </button>
+        <button class="filter-button" data-filter="معثور عليه" type="button">
+          أغراض معثور عليها
+        </button>
+      </div>
+
+      <div class="items-grid" id="results">
+        <div class="empty-state">
+          <span>🔎</span>
+          <h3>أغراضك تهمنا</h3>
+          <p>ستظهر البلاغات هنا عند إضافتها.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="report-section" id="report">
+      <div class="report-intro">
+        <span class="eyebrow">ساهم في إعادة الأغراض لأصحابها</span>
+        <h2>أضف بلاغًا جديدًا</h2>
+        <p>أدخل تفاصيل الغرض حتى يسهل التعرف عليه.</p>
+      </div>
+
+      <form id="reportForm" class="report-form">
+        <div class="form-group">
+          <label for="itemName">اسم الغرض</label>
+          <input
+            id="itemName"
+            type="text"
+            placeholder="مثال: بطاقة جامعية"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="reportType">نوع البلاغ</label>
+          <select id="reportType" required>
+            <option value="مفقود">غرض مفقود</option>
+            <option value="معثور عليه">غرض معثور عليه</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="itemLocation">مكان الفقد أو العثور</label>
+          <input
+            id="itemLocation"
+            type="text"
+            placeholder="مثال: مبنى الكلية، الدور الأول"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="itemDescription">وصف الغرض</label>
+          <textarea
+            id="itemDescription"
+            rows="4"
+            placeholder="اكتب وصفًا يساعد على تمييز الغرض"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="primary-button submit-button">
+          نشر البلاغ
+        </button>
+
+        <p id="message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="#home">لقيته<span>.</span></a>
+    <p>معًا لنعيد المفقودات إلى أصحابها.</p>
+    <small>© 2026 لقيته — جميع الحقوق محفوظة</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
